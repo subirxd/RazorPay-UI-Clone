@@ -17,6 +17,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .moveImage {
+        animation: 10s infinite linear moveCompany;
+      }
+
+      @keyframes moveCompany {
+        0% {
+          top: 0;
+        }
+        100% {
+          top: -50%;
+        }
+      }
+    </style>
     <title>RazorPay Clone</title>
   </head>
   <body class="overflow-x-hidden relative">
@@ -1318,7 +1332,7 @@
 
     <!--join razorpay section-->
     <section class="bg-[#f5f8fe] realtive pt-40 pb-12 -mt-[200px] -z-[200]">
-      <div class="w-11/12 max-w-[1080px] relative mx-auto flex">
+      <div class="w-11/12 max-w-[1080px] relative mx-auto flex flex-row">
         <!--left part-->
         <div class="flex flex-col justify-center max-w-[calc(100%-500px)]">
           <h2 class="font-mullish font-bold text-2xl text-deepBlueHead">
@@ -1338,8 +1352,19 @@
         </div>
 
         <!--right part-->
-        <div>
-          <img src="./assets/comanies.png" alt="" loading="lazy" class="" />
+        <div class="h-[500px] w-[500px] relative overflow-y-hidden mt-8">
+          <div
+            class="absolute w-full h-[150px] top-0 bg-gradient-to-l from-[#f4f8ff] to-[#fff0] z-50"
+          ></div>
+          <img
+            src="./assets/comanies.png"
+            alt=""
+            loding="lazy"
+            class="absolute object-cover moveImage"
+          />
+          <div
+            class="absolute w-full h-[150px] bottom-0 bg-gradient-to-l from-[#f4f8ff] to-[#fff0] z-50"
+          ></div>
         </div>
       </div>
     </section>
